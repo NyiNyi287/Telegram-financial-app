@@ -111,7 +111,8 @@ async def history(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Main
 def main():
-    app = ApplicationBuilder().token("7734594664:AAF8s9aIPZdQFRsahCD14uGIaN-g8SzRhr0").build()
+import os
+app = ApplicationBuilder().token(os.getenv("7830005902:AAG5RC1AURYXT_tUwZs3K5orz4EbPL7O-0U")).build()
 
     conv = ConversationHandler(
         entry_points=[CommandHandler("send", send), CommandHandler("transfer", send)],
